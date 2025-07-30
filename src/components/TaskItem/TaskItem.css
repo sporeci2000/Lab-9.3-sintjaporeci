@@ -1,6 +1,6 @@
 .task-item {
-    background: #f9f9f9;
-    border: 1px solid #ddd;
+    background-color: #000000;
+    border: 1px solid #ffffff;
     padding: 10px;
     margin-bottom: 8px;
     border-radius: 6px;
@@ -63,4 +63,14 @@
 
 .task-item button.delete-btn:hover {
     background-color: #cc0000;
+}
+
+.task-item select {
+    background-color: #fff8dc;
+    color: #000000;
+    border: none;
+    border-radius: 6px;
+    padding: 6px 10px;
+    font-weight: bold;
+    margin-right: 10px;
 }

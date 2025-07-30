@@ -14,11 +14,20 @@ export const TaskItem: React.FC<TaskItemProps> = ({ task, onStatusChange, onDele
             <p>Priority: <strong>{task.priority}</strong></p>
             <p>Due: {task.dueDate}</p>
 
-            {/* Buttons for actions */}
-            <button onClick={() => onStatusChange(task.id, 'completed')}>
-                Mark Completed
-            </button>
-            <button className="delete-btn" onClick={() => onDelete(task.id)}>
+            <select
+                value={task.status} // show current status
+                onChange={(e) => onStatusChange(task.id, e.target.value as 'pending' | 'in-progress' | 'completed')}
+            >
+                <option value="pending">Pending</option>
+                <option value="in-progress">In Progress</option>
+                <option value="completed">Completed</option>
+            </select>
+
+
+            <button
+                onClick={() => onDelete(task.id)}
+                className="delete-btn"
+            >
                 Delete
             </button>
         </div>
