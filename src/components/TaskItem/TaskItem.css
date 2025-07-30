@@ -1,10 +1,11 @@
 .task-item {
     background-color: #000000;
     border: 1px solid #ffffff;
-    padding: 10px;
-    margin-bottom: 8px;
+    padding: 15px;
+    margin-bottom: 16px;
     border-radius: 6px;
     transition: transform 0.2s ease;
+    width: 100%;
 }
 
 /* Hover effect */
@@ -12,33 +13,20 @@
     transform: scale(1.02);
 }
 
-/* Status styles */
-.task-item.completed {
-    background: #000000;
-}
-
-.task-item.in-progress {
-    background: #000000;
-}
-
-.task-item.pending {
-    background: #000000;
-}
-
 /* Priority styles */
 .task-item.high {
-    border-left: 5px solid red;
+    border: 1px solid red;
 }
 
 .task-item.medium {
-    border-left: 5px solid orange;
+    border: 1px solid orange;
 }
 
 .task-item.low {
-    border-left: 5px solid green;
+    border: 1px solid green;
 }
 
-/* Button styles for all buttons inside task-item */
+/* Buttons */
 .task-item button {
     padding: 6px 10px;
     margin-top: 5px;
@@ -50,12 +38,10 @@
     transition: background-color 0.2s ease;
 }
 
-/* Hover effect */
 .task-item button:hover {
     background-color: #0056b3;
 }
 
-/* Delete button */
 .task-item button.delete-btn {
     margin-left: 8px;
     background-color: #ff4d4d;
@@ -65,6 +51,7 @@
     background-color: #cc0000;
 }
 
+/* Dropdown */
 .task-item select {
     background-color: #fff8dc;
     color: #000000;
@@ -73,4 +60,29 @@
     padding: 6px 10px;
     font-weight: bold;
     margin-right: 10px;
+}
+
+.title-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 10px;
+}
+
+.task-buttons {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+
+.task-buttons select,
+.task-buttons .delete-btn {
+    margin: 0;
+    padding: 6px 10px;
+    height: 36px;
+    line-height: 1.2;
+    border-radius: 6px;
+    font-size: 14px;
+    display: flex;
+    align-items: center;
 }

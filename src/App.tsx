@@ -2,6 +2,7 @@ import { useState } from 'react';
 import { TaskList } from './components/TaskList/TaskList';
 import { TaskFilter } from './components/TaskFilter/TaskFilter';
 import type { Task, TaskStatus } from './types';
+import './App.css';
 
 const initialTasks: Task[] = [
   {
