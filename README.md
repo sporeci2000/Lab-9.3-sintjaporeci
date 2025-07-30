@@ -12,3 +12,12 @@ When updating the status of a task, I handled state updates in an immutable way.
 
 What challenges did you face when implementing conditional rendering?
 The main challenge with conditional rendering was ensuring the UI provided helpful feedback when there were no tasks to display. This could happen if the user deleted all tasks or applied filters that excluded every task. To solve this, I added a check in the TaskList component: if the tasks array was empty, it would return a message saying “No tasks available” instead of rendering an empty list. 
+
+References:
+https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/map 
+https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/filter
+https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/Conditional_operator
+https://developer.mozilla.org/en-US/docs/Web/API/HTMLElement/change_event 
+https://developer.mozilla.org/en-US/docs/Web/HTML/Reference/Elements/select 
+https://developer.mozilla.org/en-US/docs/Web/HTML/Reference/Elements/button 
+https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/Spread_syntax 
