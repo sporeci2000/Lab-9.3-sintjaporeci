@@ -6,27 +6,27 @@ import type { Task, TaskStatus } from './types';
 const initialTasks: Task[] = [
   {
     id: '1',
-    title: 'Learn React',
-    description: 'Read the React docs and build a small app.',
+    title: 'Task 1',
+    description: 'Description 1',
     status: 'pending',
     priority: 'high',
-    dueDate: '2025-08-15',
+    dueDate: '2025-07-30',
   },
   {
     id: '2',
-    title: 'Write Blog Post',
-    description: 'Write about the new React features.',
+    title: 'Task 2',
+    description: 'Description 2',
     status: 'in-progress',
     priority: 'medium',
-    dueDate: '2025-08-10',
+    dueDate: '2025-08-1',
   },
   {
     id: '3',
-    title: 'Buy Groceries',
-    description: 'Milk, Bread, Eggs',
+    title: 'Task 3',
+    description: 'Description 3',
     status: 'completed',
     priority: 'low',
-    dueDate: '2025-08-05',
+    dueDate: '2025-07-29',
   },
 ];
 
@@ -62,7 +62,7 @@ function App() {
 
   return (
     <div className="App" style={{ padding: 20 }}>
-      <h1>Task Manager</h1>
+      <h1>Task Manager App</h1>
 
       <TaskFilter onFilterChange={handleFilterChange} />
 

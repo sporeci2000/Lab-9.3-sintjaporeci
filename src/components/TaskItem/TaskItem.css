@@ -14,15 +14,15 @@
 
 /* Status styles */
 .task-item.completed {
-    background: #e0ffe0;
+    background: #000000;
 }
 
 .task-item.in-progress {
-    background: #fff9e0;
+    background: #000000;
 }
 
 .task-item.pending {
-    background: #ffe0e0;
+    background: #000000;
 }
 
 /* Priority styles */
