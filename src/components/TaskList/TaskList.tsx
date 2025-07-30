@@ -7,7 +7,7 @@ import './TaskList.css';
 export const TaskList: React.FC<TaskListProps> = ({ tasks, onStatusChange, onDelete }) => {
     //Checks if there are no tasks
     if (tasks.length === 0) {
-        return <p className="no-tasks">No tasks available.</p>;
+        return <p className="no-tasks">No tasks available!</p>;
     }
 
     return (
