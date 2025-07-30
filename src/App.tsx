@@ -1,35 +1,53 @@
-import { useState } from 'react'
-import reactLogo from './assets/react.svg'
-import viteLogo from '/vite.svg'
-import './App.css'
+import React, { useState } from 'react';
+import { TaskList } from './components/TaskList/TaskList';
+import type { Task, TaskStatus } from './types';
+
+const initialTasks: Task[] = [
+  {
+    id: '1',
+    title: 'Learn React',
+    description: 'Read the React docs and build a small app.',
+    status: 'pending',
+    priority: 'high',
+    dueDate: '2025-08-15',
+  },
+  {
+    id: '2',
+    title: 'Write Blog Post',
+    description: 'Write about the new React features.',
+    status: 'in-progress',
+    priority: 'medium',
+    dueDate: '2025-08-10',
+  },
+];
 
 function App() {
-  const [count, setCount] = useState(0)
+  const [tasks, setTasks] = useState(initialTasks);
+
+  // Update status of a task
+  const handleStatusChange = (taskId: string, newStatus: TaskStatus) => {
+    setTasks((prev) =>
+      prev.map((task) =>
+        task.id === taskId ? { ...task, status: newStatus } : task
+      )
+    );
+  };
+
+  // Delete a task
+  const handleDelete = (taskId: string) => {
+    setTasks((prev) => prev.filter((task) => task.id !== taskId));
+  };
 
   return (
-    <>
-      <div>
-        <a href="https://vite.dev" target="_blank">
-          <img src={viteLogo} className="logo" alt="Vite logo" />
-        </a>
-        <a href="https://react.dev" target="_blank">
-          <img src={reactLogo} className="logo react" alt="React logo" />
-        </a>
-      </div>
-      <h1>Vite + React</h1>
-      <div className="card">
-        <button onClick={() => setCount((count) => count + 1)}>
-          count is {count}
-        </button>
-        <p>
-          Edit <code>src/App.tsx</code> and save to test HMR
-        </p>
-      </div>
-      <p className="read-the-docs">
-        Click on the Vite and React logos to learn more
-      </p>
-    </>
-  )
+    <div className="App" style={{ padding: 20 }}>
+      <h1>Task Manager</h1>
+      <TaskList
+        tasks={tasks}
+        onStatusChange={handleStatusChange}
+        onDelete={handleDelete}
+      />
+    </div>
+  );
 }
 
-export default App
+export default App;
