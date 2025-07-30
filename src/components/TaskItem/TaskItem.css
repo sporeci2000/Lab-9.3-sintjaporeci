@@ -86,3 +86,29 @@
     display: flex;
     align-items: center;
 }
+
+.bottom-part {
+    display: flex;
+    justify-content:flex-start;
+    gap: 8px;
+    margin-top: 8px;
+    font-size: 0.9rem;
+    color: #ccc;
+}
+
+.priority.high strong {
+    color: red;
+}
+
+.priority.medium strong {
+    color: orange;
+}
+
+.priority.low strong {
+    color: green;
+}
+
+.due-date {
+    font-style: italic;
+    color: #aaa;
+}

@@ -32,10 +32,15 @@ export const TaskItem: React.FC<TaskItemProps> = ({ task, onStatusChange, onDele
                     </button>
                 </div>
             </div>
-
             <p>{task.description}</p>
-            <p>Priority: <strong>{task.priority}</strong></p>
-            <p>Due: {task.dueDate}</p>
+
+            <div className="bottom-part">
+
+                <span className={`priority ${task.priority}`}>
+                    Priority: <strong>{task.priority}</strong>
+                </span>
+                <span className="due-date">Due: {task.dueDate}</span>
+            </div>
         </div>
     );
 };
