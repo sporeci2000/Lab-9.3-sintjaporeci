@@ -2,6 +2,7 @@ import React, { useState } from 'react';
 import type { TaskFilterProps, TaskStatus } from '../../types';
 import './TaskFilter.css';
 
+//onFilterChange is a function passed from the parent that this component will call when the user changes the filters
 export const TaskFilter: React.FC<TaskFilterProps> = ({ onFilterChange }) => {
     const [status, setStatus] = useState<TaskStatus | ''>('');
     const [priority, setPriority] = useState<'low' | 'medium' | 'high' | ''>('');

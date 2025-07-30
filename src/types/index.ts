@@ -20,7 +20,7 @@ export interface TaskListProps {
 
 // Props for TaskItem component
 export interface TaskItemProps {
-    task: Task; //The single task object it should display
+    task: Task; //The single task object to display
     onStatusChange: (taskId: string, newStatus: TaskStatus) => void;
     onDelete: (taskId: string) => void; //A function to delete a task 
 }
